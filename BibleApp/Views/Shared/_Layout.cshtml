@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand navbar-light bg-white border-bottom">
+        <nav class="navbar fixed-top navbar-expand navbar-light border-bottom" style="background-color:#ebebeb;">
             <div class="container-fluid">
                 <div style="flex-grow: 0;">
                     <ul class="navbar-nav">
@@ -21,33 +22,33 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Read" asp-action="Index"><div class="text-center col-xs-offset-1 col-xs-2"><i class="bi bi-book-fill" style="font-size: 1.5rem;"></i><br />Read</div></a>
                         </li>
-                        
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Plans" asp-action="Index"><div class="text-center col-xs-offset-1 col-xs-2"><i class="bi bi-bookmark-check-fill" style="font-size: 1.5rem;"></i><br />Plans</div></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Videos" asp-action="Index"><div class="text-center col-xs-offset-1 col-xs-2"><i class="bi bi-collection-play-fill" style="font-size: 1.5rem;"></i><br />Videos</div></a>
                         </li>
-                       
+                       -->
                     </ul>
                 </div>
-                <form>
+                <form action="search" method="GET">
                     <div class="input-group">
                         <button class="input-group-text bg-white"><i class="bi bi-search"></i></button>
-                        <input class="searchMe form-control" type="search" placeholder="Search" aria-label="Search">
+                        <input class="searchMe form-control" type="search" name="searchfor" placeholder="Search" aria-label="Search">
                     </div>
                 </form>
                 <a class="btn btn-outline-secondary" href="#" role="button">Login</a>
             </div>
         </nav>
     </header>
-    <div class="container pt-5">
-        <main role="main" class="pb-3">
+    <div class="container-fluid pt-5">
+        <main role="main" class="pb-3 pt-5">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="navbar fixed-bottom navbar-light bg-white">
+    <footer class="navbar fixed-bottom navbar-light" style="background-color:#ebebeb">
         <div class="container-fluid">
             <h6>TheFlameExperience &copy; 2021</h6>
         </div>

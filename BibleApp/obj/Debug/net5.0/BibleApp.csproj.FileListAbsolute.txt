@@ -113,3 +113,5 @@
 /Users/prkid99/Projects/Bible/BibleApp/bin/Debug/net5.0/runtimes/win-arm/lib/net5.0/dotnet-aspnet-codegenerator-design.exe
 /Users/prkid99/Projects/Bible/BibleApp/bin/Debug/net5.0/runtimes/win-arm64/lib/net5.0/dotnet-aspnet-codegenerator-design.exe
 /Users/prkid99/Projects/Bible/BibleApp/obj/Debug/net5.0/Razor/Views/Read/Index.cshtml.g.cs
+/Users/prkid99/Projects/Bible/BibleApp/obj/Debug/net5.0/Razor/Views/Read/Table.cshtml.g.cs
+/Users/prkid99/Projects/Bible/BibleApp/obj/Debug/net5.0/Razor/Views/Search/Index.cshtml.g.cs

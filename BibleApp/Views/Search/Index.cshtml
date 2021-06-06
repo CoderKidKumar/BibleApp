@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BibleApp.Models.BibleVerseModel>
+<h1> Search results for: <i>@ViewBag.searchfor</i></h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <h5>Search by:</h5>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Bible
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Plans</a>
+                <a href="#" class="list-group-item list-group-item-action">Videos</a>
+                <a href="#" class="list-group-item list-group-item-action">Users</a>
+            </div>
+        </div>
+        <div class="col-9">
+            @foreach (var item in Model.Where(verses => verses.Text.Contains(ViewBag.searchfor)))
+            {
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.BookName) @Html.DisplayFor(modelItem => item.Chapter):@Html.DisplayFor(modelItem => item.Verse) </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.TranslationId)</h6>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Text)</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

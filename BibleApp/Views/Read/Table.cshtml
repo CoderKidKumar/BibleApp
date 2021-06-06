@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BibleApp.Models.BibleVerseModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Translation
+            </th>
+            <th>
+                Book ID
+            </th>
+            <th>
+                Book Name
+            </th>
+            <th>
+                Chapter
+            </th>
+            <th>
+                Verse
+            </th>
+            <th>
+                Verse Text
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model){
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TranslationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chapter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Verse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
